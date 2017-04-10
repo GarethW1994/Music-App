@@ -1,0 +1,255 @@
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('../images/dark_circle_gray_black_9834_3840x2400.jpg');
+    background-size: cover;
+}
+
+.music-player-container {
+    color: #fff;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.heading {
+    position: static;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.playlist-menu {
+    margin: 0 10px;
+    padding: 0;
+    float: left;
+    width: 26px;
+    height: 26px;
+    background-image: url('../images/menu.png');
+    background-size: cover;
+    background-color: blue;
+}
+.search {
+    height: 40px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#search {
+    outline-color: transparent;
+    background-color: transparent;
+    border: none;
+    width: 200px;
+    height: 23px;
+    color: #fff;
+}
+
+#searchButton {
+    width: 25px;
+    height: 25px;
+    border: none;
+    outline-color: transparent;
+    background-color: transparent;
+    background-image: url('../images/ic_action_search.png');
+    background-size: cover;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.player-container {
+    height: 500px;
+    width: 100%;
+}
+.player {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 500px;
+}
+
+.visualisation {
+    width: 340px;
+    height: 200px;
+    border: .5px solid dimgrey;
+    margin-bottom: 20px;
+}
+.playing {
+    background-color: #20b2aa;
+}
+
+.pause {
+    background-color: dimgrey;
+}
+
+.playingBars {
+    width: 100px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    margin: -33px 240px;
+}
+
+#controls {
+    width: 240px;
+    margin: 100px;
+    flex: 2;
+}
+#prevButton, #nextButton, #playButton {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: .5em;
+    border: none;
+    outline-color: transparent;
+    cursor: pointer;
+}
+
+#prevButton {
+    background-image: url(../images/ic_action_previous.png);
+    background-size: cover;
+}
+
+#nextButton {
+    background-image: url('../images/ic_action_next.png');
+    background-size: cover;
+        margin-left: 130px;
+
+}
+
+#prevButton:hover ,#nextButton:hover {
+    background-color: #B8860B;
+}
+#playButton {
+    margin-left: 110px;
+}
+
+#playButton:hover{
+    background-color: #E9967A;
+}
+
+.playButton {
+    background-image: url('../images/ic_action_play.png');
+    background-size: cover;
+    background-position: 62px;
+}
+
+.pauseButton {
+    background-image: url('../images/ic_action_pause.png');
+    background-size: cover;
+}
+
+#songs {
+    width: 100px;
+    height: 570px;
+    margin: -20;
+    float: left;
+    flex: 1;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.6);
+    overflow-y: scroll;
+}
+
+#songs::-webkit-scrollbar {
+    width: 5px;
+}
+
+#songs::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+}
+
+#songs::-webkit-scrollbar-thumb {
+      background-color: #20b2aa;
+        cursor: pointer;
+}
+
+#songs::-webkit-scrollbar-track-piece {
+    
+}
+
+#songs::-webkit-scrollbar-button {
+    background-size: cover;
+    background-color: steelblue;
+    cursor: pointer;
+}
+
+#songs li {
+    position: relative;
+    display: block;
+    margin: 30px 20px;
+    padding: 0;
+    height: 55px;
+    width: 320px;
+    overflow: hidden;
+}
+#songs li h4 {
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    width: 240px;
+    margin: 20px 10px;
+    padding: 0;
+    position: absolute;
+}
+
+#songs hr {
+    position: relative;
+    width: 350px;
+    margin: 10px 10px;
+    border-bottom: .1px solid dimgray;
+}
+
+#playNow {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: .2em;
+    border: none;
+    outline-color: transparent;
+    cursor: pointer;
+    background-image: url('../images/ic_action_play.png');
+    background-size: cover;
+    background-position: 62px;
+    position: absolute;
+    margin: 12px 270px;
+}
+
+.playListTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 15px;
+    width: 393px;
+    height: 20px;
+    margin: 0 -40px;
+    border-bottom: .5px solid black;
+    z-index: 1;
+}
+
+@keyframes stripeFade {
+    0% {border-bottom-color: dodgerblue;}
+    50% {border-bottom-color: yellow;}
+    75%  {border-bottom-color: greenyellow;}
+    100% {border-bottom-color: steelblue;};
+}

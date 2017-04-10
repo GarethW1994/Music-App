@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="handlebars/handlebars-v4.0.5.js"></script>
+</head>
+
+<body>
+    <div class="music-player-container">
+
+        <div class="heading">
+            <script src="music-app.js" type="text/x-handlebars" id="heading">
+                <title>{{title}}</title>
+                <div class="playlist-icon"></div>
+                <h2>{{heading}}</h2>
+            </script>
+        </div>
+        <div class="search">
+            <input type="button" id="searchButton"/>
+            <input type="text" size="20" placeholder="Search..." autocomplete="on" name="searchValue" id="search"/>
+        </div>
+<div class="player-container">        
+    <div class="player">
+        
+                <ul id="songs">
+            <script src="music-app.js" type="text/x-handlebars" id="customList">
+                    <div class="playListTitle">Gareth's PlayList</div>
+
+                    {{#each list}} 
+                    <li class="li">
+                        <h4><span>{{index}}. </span>{{name}}</h4>
+                        <audio id="song">
+                            <source src={{src}} type="audio/mp3"/>
+                        </audio>
+                            <input type="button" id="playNow" />
+                        <!--<div class="playingBars"></div>-->
+                    </li>
+                    <hr/>
+                    {{/each}}
+            </script>
+                </ul>
+                <div id="controls">
+                <div class="visualisation"></div>
+                    <input type="button"  id="prevButton" />
+                    <input type="button" id="playButton" />
+                    <input type="button" id="nextButton" />
+                </div>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="music-app.js" charset="utf-8"></script>
+
+</html>
